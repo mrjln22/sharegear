@@ -1,0 +1,21 @@
+.banner-text {
+  text-align: right;
+  padding-right: 15%;
+  h1 {
+    font-size: 26px;
+    margin-bottom: 0%;
+    color: white;
+  }
+}
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: $teal;
+  height: 280px;
+  // background: url(../img/banner.jpg) no-reapeat;
+  background-position: center;
+  background-size: cover;
+
+}

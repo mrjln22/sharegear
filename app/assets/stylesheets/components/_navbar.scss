@@ -40,9 +40,14 @@
   padding-top: .25%;
   padding-bottom: 0%;
 }
-img {
+.navbar-logo li img {
   width: 140px;
   padding: 0%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 6px;
+  padding-left: 0;
 }
 
 .navbar-text {
@@ -53,4 +58,5 @@ img {
 .container-fluid {
   padding-left: 30px;
   padding-right: 30px;
+  height: 70px;
 }
