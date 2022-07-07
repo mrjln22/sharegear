@@ -1,21 +1,35 @@
-.banner-text {
-  text-align: right;
-  padding-right: 15%;
+.banner-content {
+  max-width: 100%;
+  justify-content: center;
+  margin: 10%;
   h1 {
-    font-size: 26px;
-    margin-bottom: 0%;
+    text-align: right;
+    font-size: 24px;
+    margin-bottom: 0px;
     color: white;
   }
 }
 
+.search-bar {
+margin-top: 5%;
+margin: 0 auto;
+display: block;
+width: 750px;
+height: 12px;
+input {
+  font-family: $headers-font;
+  margin-top: 28px;
+  opacity: 55%;
+  background-color: white;
+  height: 30px;
+}
+}
 .banner-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: right;
-  background-color: $teal;
-  height: 280px;
-  // background: url(../img/banner.jpg) no-reapeat;
-  background-position: center;
+  height: 265px;
+  background-image: asset-url("banner.jpg");
+  background-position: top;
   background-size: cover;
-
 }
