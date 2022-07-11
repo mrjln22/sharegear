@@ -23,13 +23,14 @@ puts "Finished!"
 
 puts "Creating products...."
 
-product_one = Product.new(name: "Kayak", category: "watersports", available: "yes", description: "This is a great Kayak", price: 100)
-product_one.save
-
-product_two = Product.new(name: "Surfboard", category: "watersports", available: "yes", description: "This is a great surfboard", price: 200)
-product_two.save
-
-product_three = Product.new(name: "bicycle", category: "cycling", available: "yes", description: "This is a great bike", price: 500)
-product_three.save
+product_one = Product.new(name: "Kayak", category: "watersports", available: true, description: "This is a great Kayak", price: 100, user: User.first)
+product_one.save!
+puts "product 1 is created"
+product_two = Product.new(name: "Surfboard", category: "watersports", available: true, description: "This is a great surfboard", price: 200, user: User.first)
+product_two.save!
+puts "product 2 is created"
+product_three = Product.new(name: "bicycle", category: "cycling", available: true, description: "This is a great bike", price: 500, user: User.first)
+product_three.save!
+puts "product 3 is created"
 
 puts "Finished!"
