@@ -14,18 +14,18 @@
       %>
     <% end %>
   <%# searchbar %>
-  <%# <div class="container"> %>
-    <%# <div class="row justify-content-center"> %>
-      <%# <div class="col-sm-8"> %>
-        <%# <div id="products"> %>
-          <%# <% @products.each do |product| %>
-            <%# <h4><%= product.name %></h4>
-            <%# <p><%= product.category %></p>
-          <%# <% end %>
-        <%# </div> %>
-      <%# </div> %>
-    <%# </div> %>
-  <%# </div> %>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-8">
+            <div id="products">
+              <% @products.each do |product| %>
+              <h4><%= product.name %></h4>
+              <p><%= product.category %></p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
