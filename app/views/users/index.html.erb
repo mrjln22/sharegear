@@ -1,2 +1,14 @@
 <%= render "shared/banner"%>
 <%= render "shared/index-toggle"%>
+<%= render "shared/product-card"%>
+
+<div class="card-container">
+  <% @product.each do |product| %>
+    <div class="card-product position-relative">
+      <%= render "shared/product_card", product: product do %>
+        <%= link_to "Lesson Info", product_path(product), class: "btn btn-secondary" %>
+        <%= link_to "Book Now", product_path(product), class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
