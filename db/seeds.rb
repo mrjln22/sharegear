@@ -4,7 +4,11 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+
+#   Character.create(name: 'Luke', movie: movies.first)db
+
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require "date"
 require "time"
 require "open-uri"
