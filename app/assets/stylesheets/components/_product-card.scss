@@ -3,9 +3,11 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+
 .card-product-container {
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 35px;
 }
 
   .card-product-footer{
@@ -13,16 +15,20 @@
     align-items: flex-end;
     justify-content: space-between;
     height: 70px;
+    border-radius: 0 0 5px 5px;
+    border-bottom: 2px solid $dark-teal;
   }
 
   .card-product img {
     height: 200px;
     width: 100%;
     object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid $dark-teal;
   }
 
   .card-product h2 {
-    padding: 5px;
+    padding: 3px;
     padding-left: 10px;
     padding-right: 10px;
     margin: 0;
@@ -30,8 +36,9 @@
   }
 
   .card-product p {
-    padding: 5px;
+    padding: 3px;
     padding-left: 10px;
     padding-right: 10px;
     margin: 0;
+    color: $teal;
   }
