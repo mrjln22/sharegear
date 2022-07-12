@@ -4,5 +4,6 @@
 <h2><%= @product.name %></h2>
 <p><%= @product.category %></p>
 <p><%= @product.description %></p>
-<p><%= @product.image %></p>
+<p><%= @product.photo %></p>
 <p><%= @product.price %></p>
+<p><%= cl_image_path @product.photo.key %></p>

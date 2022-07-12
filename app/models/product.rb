@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_one_attached :photo
   # include PgSearch::Model
   # pg_search_scope :search_by_name_and_category,
   # against: [ :name, :category ],
@@ -11,5 +12,4 @@ class Product < ApplicationRecord
   # validates :name, presence: true
   # validates :price, presence: true
   # validates :available, presence: true
-
 end
