@@ -24,6 +24,10 @@ puts "Finished!"
 puts "Creating products...."
 
 product_one = Product.new(name: "Kayak", category: "watersports", available: true, description: "This is a great Kayak", price: 100, user: User.first)
+# file_one = URI.open('https://res.cloudinary.com/dts5gkqpt/image/upload/
+# v1657638028/development/petuuk962ut640ez4jmn9b3v8xpw.jpg')
+# product_one.photo.attach(io: file_one, filename: "kayak.jpg", content_type:
+# 'image/jpg')
 product_one.save!
 puts "product 1 is created"
 product_two = Product.new(name: "Surfboard", category: "watersports", available: true, description: "This is a great surfboard", price: 200, user: User.first)
@@ -34,3 +38,8 @@ product_three.save!
 puts "product 3 is created"
 
 puts "Finished!"
+
+# service_one = Service.new(skill_name: "Guitar lessons", price_per_hour: 75, # availability: true, user: User.first, description: "Learn all the classics")
+# file_one = URI.open('https://images.unsplash.com/# photo-1604286742257-9d211b05b0df?ixlib=rb-1.2.1&# ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&# q=80')
+# service_one.photo.attach(io: file_one, filename: 'nes.png', content_type: # 'image/png')
+# service_one.save
