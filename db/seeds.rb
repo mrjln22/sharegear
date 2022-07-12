@@ -24,10 +24,8 @@ puts "Finished!"
 puts "Creating products...."
 
 product_one = Product.new(name: "Kayak", category: "watersports", available: true, description: "This is a great Kayak", price: 100, user: User.first)
-# product_one.image.attach(io: File.open('app/assets/images/kayak.png'), # filename: 'kayak.jpg', content_type: 'images/png')
-# file_one = URI.open('https://m.media-amazon.com/images/I/71gVYic0OVL._AC_SX679_.# jpg')
-# product_one.image.service_url(io: file_one, filename: 'nes.png', content_type: # 'image/png')
-product_one.image.attach(io: File.open(Rails.root.join('app/assets/images/kayak.jpg')), filename: 'kayak.jpg')
+file_one = URI.open('https://images.unsplash.com/photo-1595960684234-49d2a004e753?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8a2F5YWt8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60')
+product_one.image.attach(io: file_one, filename: "#{product_one}.png", content_type: 'image/png')
 product_one.save!
 puts "product 1 is created"
 product_two = Product.new(name: "Surfboard", category: "watersports", available: true, description: "This is a great surfboard", price: 200, user: User.first)
