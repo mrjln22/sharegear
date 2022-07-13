@@ -1,0 +1,35 @@
+.card-productshow{
+  display: flex;
+  margin-top: 100px;
+  margin-left: 100px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  justify-content: space-between;
+  width:80%;
+  height: 80%;
+  padding: 16px;
+}
+.card-productshow-left{
+  width: 40%;
+}
+
+.card-productshow-right{
+  width: 55%;
+}
+
+.card-productshow img{
+  height:250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.productshow-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-booknow{
+  border-radius: 20px;
+  background-color: #C86610;
+  border: 1px;
+}

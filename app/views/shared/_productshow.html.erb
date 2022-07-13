@@ -1,0 +1,27 @@
+
+  <div class="card-productshow">
+    <div class="card-productshow-left">
+      <img src="https://images.unsplash.com/photo-1595960684234-49d2a004e753? ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8a2F5YWt8ZW58MHx8MHx8&  auto=format&fit=crop&w=500&q=60" />
+        <div class="card-productshow-left-bottom">
+          <h2><%= @product.name %></h2>
+            <div class="productshow-info">
+              <p>$<%= @product.price %> per day </p>
+              <button type="button" class="btn-booknow">Book now</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-productshow-right">
+      <p>Description</p>
+      <br>
+      <p><%= @product.description %></p>
+    </div>
+  </div>
+
+
+<p><%= link_to "All products", product_path(@product) %></p>
+
+
+
+
+
+<%# <p><%= cl_image_path @product.photo.key %>
