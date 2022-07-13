@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'users#index'
   resources :products, only: :index
-
+  resources :bookings
   get 'users/index'
   get 'users/show'
   get "products", to: "products#index"
