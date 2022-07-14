@@ -9,9 +9,10 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @product.user = current_user
   end
 
   def show
-   @product = Product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 end

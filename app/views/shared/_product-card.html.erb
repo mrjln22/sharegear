@@ -1,7 +1,8 @@
   <div class="card-product-container">
     <div class="cards">
+    <% @products.each do |product| %>
       <div class="card-product">
-        <% @products.each do |product| %>
+         <%= link_to product_path(product.id) do %>
         <img src="https://source.unsplash.com/random/?<%= product.name %>" />
           <div class="card-product-footer">
             <div>
@@ -12,4 +13,5 @@
       </div>
       <% end %>
     </div>
+      <% end %>
   </div>
