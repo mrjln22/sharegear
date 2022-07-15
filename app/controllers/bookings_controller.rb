@@ -1,6 +1,9 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
+    @product = Product.new
+    @booking.product = Product.find(params[:product_id])
+    # @previous_booking = Booking.where(user: current_user, product: @product)
   end
 
   def create
@@ -9,7 +12,12 @@ class BookingsController < ApplicationController
     @booking.product = Product.find(params[:product_id])
     @booking.status = "pending"
     @booking.save
-    redirect_to product_path(@booking.service), alert: 'Congratulations! You booked a product'
+    redirect_to products_path, alert: 'Congratulations! You booked a product'
+  end
+
+  def show
+    @booking = Booking.new
+    @product = Product.find(params[:product_id])
   end
 
   private

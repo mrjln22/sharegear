@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @booking = Booking.new
     @product.user = current_user
   end
 
