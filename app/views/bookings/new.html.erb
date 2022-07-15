@@ -2,6 +2,6 @@
 <br>
 <h2><%= @booking.product %></h2>
 <%= simple_form_for [:product, @booking] do |f| %>
-  <%= f.input :date %>
+  <p>Date: <input type="text" id="datepicker"></p>
   <%= f.button :submit, "Book Skill", class: "btn btn-dark" %>
 <% end %>

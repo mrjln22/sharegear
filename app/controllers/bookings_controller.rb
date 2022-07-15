@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def new
-    @booking = Booking.new
+    @booking = Booking.new(booking_params)
     @product = Product.new
     @booking.product = Product.find(params[:product_id])
     # @previous_booking = Booking.where(user: current_user, product: @product)
@@ -23,6 +23,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:status, :product_id, :date, :user_id)
+    params.permit(:status, :product_id, :date, :user_id)
   end
 end
