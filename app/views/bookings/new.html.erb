@@ -1,6 +1,6 @@
 <h1> Create a new booking! </h1>
 <br>
-<h2><%= @booking.product %></h2>
+<h2><%= @booking.product.name %></h2>
 <%= simple_form_for [:product, @booking] do |f| %>
   <p>Date: <input type="text" id="datepicker"></p>
   <%= f.button :submit, "Book Skill", class: "btn btn-dark" %>
