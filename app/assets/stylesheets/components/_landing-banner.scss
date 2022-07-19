@@ -1,0 +1,28 @@
+.landing-background-container .overlay {
+  top: 300px;
+  font-weight: bold;
+  text-align: right;
+  font-size: 40px;
+  text-align: center;
+  align-items: center;
+  padding-top: 300px;
+  color: white;
+  display: block;
+  font-family: $headers-font;
+}
+
+.landing-background-container::before {
+  content:"";
+        background-image: url("https://source.unsplash.com/random/900×700/?kayaking,snowboarding");
+  filter: brightness(50%);
+  position:absolute;
+  height: 100vh;
+  background-size: cover;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  width:auto;
+  height:auto;
+  z-index:-3;
+}
