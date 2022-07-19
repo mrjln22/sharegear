@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <ul class="navbar-logo">
-      <li><a href=""><%= image_tag "ShareGearLogo.png" %></a></li>
+      <li><a href="/products"><%= image_tag "ShareGearLogo.png" %></a></li>
     </ul>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
         <% if user_signed_in? %>
           <div class="navbar-text">
             <li class="nav-item active">
-              <%= link_to "Home", "#", class: "nav-link" %>
+              <%= link_to "Home", products_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
               <%= link_to "Location", "#", class: "nav-link" %>
@@ -22,8 +22,8 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://www.shareicon.net/data/512x512/2015/12/25/692753_vertical_512x512.png", class: "dots-dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "My account", "#", class: "dropdown-item" %>
+              <%= link_to "My bookings", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
