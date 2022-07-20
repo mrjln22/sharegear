@@ -1,10 +1,16 @@
 class ProductsController < ApplicationController
+  before_action :set_user
+
   def index
     if params[:query].present?
       @products = Product.search_by_name_and_category(params[:query])
     else
       @products = Product.all
     end
+  end
+
+  def star
+    @products = Product.where(user_id: @user.id)
   end
 
   def new
@@ -33,4 +39,8 @@ private
 
   def product_params
     params.require(:product).permit(:name, :category, :price, :description)
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
