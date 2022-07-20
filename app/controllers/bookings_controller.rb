@@ -1,4 +1,11 @@
 class BookingsController < ApplicationController
+  before_action :set_user
+
+  def index
+    @user = User.find(params[:user_id])
+    @bookings = Booking.where(user_id: @user.id)
+  end
+
   def new
     @booking = Booking.new(booking_params)
     @product = Product.new
@@ -11,8 +18,11 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.product = Product.find(params[:product_id])
     @booking.status = "pending"
-    @booking.save
-    redirect_to products_path, alert: 'Congratulations! You booked a product'
+    if @booking.save
+      redirect_to products_path, alert: 'Congratulations! You booked a product'
+    else
+      render :new, date: :unprocessible_entity
+    end
   end
 
   def show
@@ -24,5 +34,9 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.permit(:status, :product_id, :date, :user_id)
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
 end

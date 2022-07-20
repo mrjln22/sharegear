@@ -1,0 +1,13 @@
+<%= render 'shared/navbar' %>
+<h1>Welcome to bookings/index page</h1>
+<%= render "shared/banner"%>
+<%= render "shared/index-toggle"%>
+
+ <% @bookings.each do |booking| %>
+  <ul>
+    <li>Product ID:<%= booking.product_id %></li>
+    <li>User ID:<%= booking.user_id %></li>
+    <li>Status: <%= booking.status %></li>
+    <li>Date:<%= booking.date %></li>
+  </ul>
+<% end %>
