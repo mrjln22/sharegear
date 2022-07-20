@@ -1,0 +1,9 @@
+<%= simple_form_for [ @product ] do |f| %>
+  <div class="product-description-container">
+    <%= f.input :name %>
+    <%= f.input :category %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+  </div>
+  <%= f.submit "Submit your gear", class: "btn btn-primary" %>
+<% end %>
