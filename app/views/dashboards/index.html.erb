@@ -1,0 +1,8 @@
+<h1> THIS IS DASHBOARD INDEX </h1>
+<% @products.each do |product| %>
+  <ul>
+    <li><%= product.name %></li>
+    <li><%= product.description %></li>
+    <li><%= product.price %></li>
+  </ul>
+<% end %>
