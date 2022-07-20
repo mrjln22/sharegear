@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  # before_action :set_user
+
   def index
     if params[:query].present?
       @products = Product.search_by_name_and_category(params[:query])
@@ -27,10 +29,10 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @booking = Booking.new
   end
-end
 
-private
+  private
 
   def product_params
     params.require(:product).permit(:name, :category, :price, :description)
   end
+end
