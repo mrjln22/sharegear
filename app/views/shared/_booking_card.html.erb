@@ -1,0 +1,19 @@
+<h1>Welcome to My Bookings/index page!</h1>
+<div class= "card-booking-container">
+  <div class = "booking-cards">
+    <% @bookings.each do |booking| %>
+      <div class="booking-card">
+        <div class="booking-card-top">
+          <h2>Product: <%= booking.product.name %></h2>
+          <p>Date: <%= booking.date %></p>
+        </div>
+        <div class="booking-card-bottom">
+          <p>Status: <%= booking.status %></p>
+          <%= link_to "Cancel", "#", class: "btn-booking" %>
+          <%= link_to "Decline", "#", class: "btn-booking" %>
+        </div>
+         <img src="https://source.unsplash.com/random/?">
+      </div>
+    <% end %>
+  </div>
+</div>
