@@ -6,7 +6,7 @@
           <h2><%= @product.name %></h2>
             <div class="productshow-info">
               <p>$<%= @product.price %> per day </p>
-              <%= link_to "Book Now", new_product_booking_path(@product.id), class:'btn-booknow' %>
+              <%= link_to "Book Now", new_product_booking_path(@product.id), class:'btn-secondary' %>
             </div>
         </div>
     </div>
