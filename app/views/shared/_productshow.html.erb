@@ -6,7 +6,10 @@
           <h2><%= @product.name %></h2>
             <div class="productshow-info">
               <p>$<%= @product.price %> per day </p>
-              <%= link_to "Book Now", new_product_booking_path(@product.id), class:'btn-booknow' %>
+              <div class="productshow-buttons"style="float:right;">
+                <%= link_to "Book Now", new_product_booking_path(@product.id), class:'btn-booknow' %>
+                <%= link_to "All products", products_path, class:'link' %>
+              </div>
             </div>
         </div>
     </div>
@@ -17,8 +20,6 @@
     </div>
   </div>
 
-
-<%= link_to "All products", products_path, class:'link' %>
 
 
 

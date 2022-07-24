@@ -2,19 +2,26 @@
   display: flex;
   margin-top: 100px;
   margin-left: 100px;
+  margin: 10%;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   justify-content: space-between;
   width:80%;
   height: 80%;
   padding: 16px;
+  padding-bottom: 0px;
 }
+
+.productshow-buttons{
+  justify-content: end;
+}
+
 .card-productshow-left{
   width: 40%;
 }
 
 .card-productshow-right{
-  width: 55%;
+  width: 58%;
 }
 
 .card-productshow img{
@@ -26,6 +33,7 @@
 .productshow-info{
   display: flex;
   justify-content: space-between;
+  padding: 0%;
 }
 
 .btn-booknow{
