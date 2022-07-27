@@ -18,10 +18,10 @@ Product.destroy_all
 
 puts "Creating Adrienne the user..."
 
-User.create!(first_name: "Adrienne", last_name: "Ackley", dob: Date.parse("01-01-2000"), address: "5 America street", password: "123456", email: "adrienne@adrienne.com")
+User.create!(first_name: "Adrienne", last_name: "Ackley", dob: Date.parse("01-01-2000"), address: "5 America street", password: "123456", email: "adrienne@adrienne.com", role: "owner")
 
 puts "Creating Marjolijn the user..."
-User.create!(first_name: "Adrienne", last_name: "Ackley", dob: Date.parse("01-01-2000"), address: "5 England street ", password: "123456", email:"marjolijn@marjolijn.com")
+User.create!(first_name: "Marjolijn", last_name: "van der", dob: Date.parse("01-01-2000"), address: "5 England street ", password: "123456", email:"marjolijn@marjolijn.com", role: "owner")
 
 puts "Finished!"
 
@@ -37,7 +37,7 @@ puts "product 1 is created"
 product_two = Product.new(name: "Surfboard", category: "watersports", available: true, description: "This is a great surfboard", price: 200, user: User.first)
 product_two.save!
 puts "product 2 is created"
-product_three = Product.new(name: "bicycle", category: "cycling", available: true, description: "This is a great bike", price: 500, user: User.first)
+product_three = Product.new(name: "bicycle", category: "cycling", available: true, description: "This is a great bike", price: 500, user: User.last)
 product_three.save!
 puts "product 3 is created"
 
