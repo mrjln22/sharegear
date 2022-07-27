@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  # before_action :set_user
+  before_action :set_user
 
   def index
     @user = User.find(params[:user_id])
