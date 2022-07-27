@@ -23,7 +23,7 @@
             <%= image_tag "https://www.shareicon.net/data/512x512/2015/12/25/692753_vertical_512x512.png", class: "dots-dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%# <%= link_to "My account", user_dashboard_path, class: "dropdown-item" %>
-              <%= link_to "My bookings", "#", class: "dropdown-item" %>
+              <%= link_to "My bookings", user_bookings_path(current_user), class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
