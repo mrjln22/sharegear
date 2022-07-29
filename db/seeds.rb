@@ -18,7 +18,7 @@ Product.destroy_all
 
 puts "Creating Adrienne the user..."
 
-User.create!(first_name: "Adrienne", last_name: "Ackley", dob: Date.parse("01-01-2000"), address: "5 America street", password: "123456", email: "adrienne@adrienne.com", role: "owner")
+User.create!(first_name: "Adrienne", last_name: "Ackley", dob: Date.new(2000, 1, 1), address: "5 America street", password: "123456", email: "adrienne@adrienne.com", role: "owner")
 
 puts "Creating Marjolijn the user..."
 User.create!(first_name: "Marjolijn", last_name: "van der", dob: Date.parse("01-01-2000"), address: "5 England street ", password: "123456", email:"marjolijn@marjolijn.com", role: "owner")
