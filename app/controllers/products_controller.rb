@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   # before_action :set_user
-  before_action :set_product, only: %i[create update show destroy]
+  before_action :set_product, only: %i[edit update show destroy]
 
   def index
     if params[:query].present?
