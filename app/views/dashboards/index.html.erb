@@ -19,7 +19,7 @@
     <li><%= product.description %></li>
     <li><%= product.price %></li>
     <li><%= product.category %></li>
-  <%# <%= link_to new_product_path,:class => "btn btn-small", method: :delete do %> DELETE
 <%= link_to "Edit Gear", edit_product_path(product.id) %>
+<%= link_to "Delete", product_path(product.id), method: :delete, data: { confirm: "Are you sure" } %>
   </ul>
 <% end %>

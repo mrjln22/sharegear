@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   # before_action :set_user
-  before_action :set_product
+  before_action :set_product, only: %i[create update show destroy]
 
   def index
     if params[:query].present?
@@ -27,18 +27,15 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
     @booking = Booking.new
   end
 
-  # def destroy
-  #   @product = Product.find(params[product_id])
-  #   @product.destroy
-  #   redirect_to products_path
-  # end
+  def destroy
+    @product.destroy
+    redirect_to root_path
+  end
 
   def edit
-    @product = Product.find(params[:id])
   end
 
   def update
