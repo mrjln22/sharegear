@@ -1,11 +1,25 @@
 <%= render 'shared/navbar' %>
 <%= render "shared/banner"%>
 <%= render "shared/index-toggle"%>
+
+<h1> User Info </h1>
+<%=@user.first_name%>
+<%=@user.last_name%>
+<%=@user.address%>
+<%# <h2>date of birth<%=@user.dob%>
+<%= link_to "add new gear", new_product_path %>
+<%# link to making a new product %>
+
+
+
 <h1> THIS IS DASHBOARD INDEX </h1>
 <% @products.each do |product| %>
   <ul>
     <li><%= product.name %></li>
     <li><%= product.description %></li>
     <li><%= product.price %></li>
+    <li><%= product.category %></li>
+  <%# <%= link_to new_product_path,:class => "btn btn-small", method: :delete do %> DELETE
+<%= link_to "Edit Gear", edit_product_path(product.id) %>
   </ul>
 <% end %>

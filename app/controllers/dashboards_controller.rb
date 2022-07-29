@@ -2,7 +2,7 @@ class DashboardsController < ApplicationController
   before_action :set_user
 
   def index
-    @user = User.find(params[:user_id])
+    @users = User.find(params[:user_id])
     @products = Product.where(user_id: @user.id)
   end
 
