@@ -17,6 +17,9 @@
     height: 70px;
     border-radius: 0 0 5px 5px;
     border-bottom: 2px solid $dark-teal;
+    text-decoration: none;
+    color: $secondary;
+    background-color: white;
   }
 
   .card-product img {
@@ -25,6 +28,10 @@
     object-fit: cover;
     border-radius: 5px 5px 0 0;
     border-bottom: 2px solid $dark-teal;
+    &:hover {
+      height: 205px;
+      transition-duration: .03s;
+    }
   }
 
   .card-product h2 {
@@ -41,4 +48,8 @@
     padding-right: 10px;
     margin: 0;
     color: $teal;
+  }
+
+  .cards a {
+    text-decoration: none;
   }

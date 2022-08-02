@@ -5,9 +5,8 @@
          <%= link_to product_path(product.id) do %>
         <img src="https://source.unsplash.com/random/?<%= product.name %>" />
           <div class="card-product-footer">
-            <div>
+            <div style="text-decoration:none;">
               <h2><%= product.name %></h2>
-              <p><%= product.category %></p>
               <p>Owner <%= product.user.first_name %></p>
 
             </div>
