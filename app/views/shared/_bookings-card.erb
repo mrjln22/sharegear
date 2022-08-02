@@ -1,25 +1,32 @@
- <h1> Welcome to bookings/index page</h1>
+<div class="bookings-index-container">
+  <h1> Welcome to bookings/index page</h1>
 
- <h1> My booked services/ owner</h1>
-   <% @bookings.each do |b| %>
-        <li> <strong>Gear:</strong> <%= b.product.name %></li><br>
-        <li>customer name:<%= b.user.first_name%></li><br>
-        <li>Date:<%= b.date%></li><br>
-        <li>Status:<%= b.status%></li><br>
-        <%= simple_form_for [current_user, b] do |f| %>
-          <%= f.input :status, label: 'Status:', collection:['pending','confirmed', 'cancelled'] %>
-            <%= f.button :submit, "Submit", class: "btn btn-dark"%>
-            <% end %>
-        <% end %>
+  <h1> My booked services/ owner</h1>
+  <div class="bookings-card-products">
+    <% @bookings.each do |b| %>
+    <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
+      <div class="booking-card-infos">
+        <h2> <strong></strong> <%= b.product.name %></h2><br>
+        <h3><%= b.user.first_name%></h3><br>
+        <h3>Date:<%= b.date%></h3><br>
+      </div>
+          <%= simple_form_for [current_user, b] do |f| %>
+            <%= f.input :status, label: 'Status:', collection:['pending','confirmed', 'cancelled'] %>
+              <%= f.button :submit, "Submit", class: "btn btn-dark"%>
+              <% end %>
+          <% end %>
+  </div>
 
 
- <h1> My bookings !! (customer) </h1>
 
-    <% @customer_booking.each do |b| %>
-        <li> <strong>Gear:</strong> <%= b.product.name %></li><br>
-        <li>Status:</strong> <%= b.status %></li><br>
-        <li>Date:<%= b.date%></li><br>
-        <li>User ID:<%= b.user.first_name%></li><br>
-        <li>Product owner:<%= b.product.user.first_name%></li><br>
+  <h1> My bookings !! (customer) </h1>
 
-    <% end %>
+      <% @customer_booking.each do |b| %>
+          <li> <strong>Gear:</strong> <%= b.product.name %></li><br>
+          <li>Status:</strong> <%= b.status %></li><br>
+          <li>Date:<%= b.date%></li><br>
+          <li>User ID:<%= b.user.first_name%></li><br>
+          <li>Product owner:<%= b.product.user.first_name%></li><br>
+
+      <% end %>
+</div>
