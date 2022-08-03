@@ -15,9 +15,9 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new(booking_params)
-    @product = Product.new
-    @booking.product = Product.find(params[:product_id])
+    @booking = Booking.new()
+    @product = Product.find(params[:product_id])
+    # @booking.product = Product.find(params[:product_id])
     # @previous_booking = Booking.where(user: current_user, product: @product)
   end
 
@@ -26,10 +26,10 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.product = Product.find(params[:product_id])
     @booking.status = "pending"
-    if @booking.save
+    if @booking.save!
       redirect_to products_path, alert: 'Congratulations! You booked a product'
     else
-      render :new, date: :unprocessible_entity
+      render :new
     end
   end
 
@@ -47,7 +47,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.permit(:status, :product_id, :date, :user_id)
+    params.require(:booking).permit(:status, :product_id, :date, :user_id)
   end
 
   def set_user
