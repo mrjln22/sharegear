@@ -1,0 +1,53 @@
+.dashboard-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 10%;
+}
+
+.personal-info-container {
+  width: 50%;
+  }
+
+  .personal-info-top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4px;
+    background: white;
+  }
+  .personal-info-bottom{
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: fit-content;
+    padding: 4px;
+  }
+
+.my-gear-container{
+  width: 50%;
+}
+
+.gear-cards{
+
+  height: fit-content;
+  padding: 4px;
+}
+
+.gear-card-bottom img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gear-card-top{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  background: white;
+}
+
+.gear-card-bottom{
+  background-color: white;
+  margin-bottom: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 8px 4px;
+}
