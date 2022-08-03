@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
 
   def show
     @booking = Booking.new
+
   end
 
   def destroy
