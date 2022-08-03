@@ -2,24 +2,35 @@
 <%= render "shared/banner"%>
 <%= render "shared/index-toggle"%>
 
-<h1> User Info </h1>
-<%=@user.first_name%>
-<%=@user.last_name%>
-<%=@user.address%>
-<%# <h2>date of birth<%=@user.dob%>
-<%= link_to "add new gear", new_product_path %>
-<%# link to making a new product %>
+<div class="dashboard-container">
+  <div class="personal-info-container">
+    <div class= "personal-info-top">
+      <h2> My personal information </h2>
+      <%= link_to "Edit", "", class: "btn-orange"  %>
+    </div>
+    <div class= "personal-info-bottom">
+      <h4> <strong>Name: </strong><%=@user.first_name%></h4>
+      <h4> <strong>Last Name: </strong><%=@user.last_name%></h4>
+      <h4> <strong>Address: </strong><%=@user.address%></h4>
+      <h4> <strong>Date of birth: </strong><%=@user.dob%></h4>
+      <h4> <strong>Email: </strong><%=@user.email%></h4>
+    </div>
+  </div>
 
 
-
-<h1> THIS IS DASHBOARD INDEX </h1>
-<% @products.each do |product| %>
-  <ul>
-    <li><%= product.name %></li>
-    <li><%= product.description %></li>
-    <li><%= product.price %></li>
-    <li><%= product.category %></li>
-<%= link_to "Edit Gear", edit_product_path(product.id) %>
-<%= link_to "Delete", product_path(product.id), method: :delete, data: { confirm: "Are you sure" } %>
-  </ul>
-<% end %>
+  <div class="my-gear-container">
+    <div class= "gear-card-top">
+      <h2> My gear </h2>
+      <%= link_to "add new gear", new_product_path, class: "btn-orange"  %>
+    </div>
+    <% @products.each do |product| %>
+    <div class="gear-card-bottom">
+      <img src="https://source.unsplash.com/random/?<%= product.name %>" />
+        <h3><%= product.name %></h3>
+          <%= link_to "Edit Gear", edit_product_path(product.id),     class:"btn-orange" %>
+          <%= link_to "Delete", product_path(product.id), method: :delete,data:   {   confirm: "Are you sure" }, class: "btn-orange" %>
+        </div>
+    <% end %>
+    </div>
+  </div>
+</div>

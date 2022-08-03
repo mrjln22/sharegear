@@ -1,6 +1,5 @@
 <div class="bookings-index-container">
-    <h1> My booked services/ owner</h1>
-    <div class="bookings-owner-container">
+  <h1> My booked services/ owner</h1>
     <div class="bookings-card-products">
       <% @bookings.each do |b| %>
         <div class="booking-card-infos" id ="left">
@@ -9,15 +8,14 @@
           <h3>Date:<%= b.date%></h3><br>
             <%= simple_form_for [current_user, b] do |f| %>
               <%= f.input :status, label: 'Status:', collection:['pending','confirmed', 'cancelled'] %>
-                <%= f.button :submit, "Submit", class: "btn btn-dark"%>
+                <%= f.button :submit, "Submit", class: 'btn-orange'%>
                 <% end %>
-                </div>
 
-      <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
-
-            <% end %>
+                <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
+        </div>
+      <% end %>
     </div>
-  </div>
+</div>
 
 
   <div class="bookings-customer-container">
