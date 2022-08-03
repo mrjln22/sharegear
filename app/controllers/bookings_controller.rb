@@ -27,7 +27,7 @@ class BookingsController < ApplicationController
     @booking.product = Product.find(params[:product_id])
     @booking.status = "pending"
     if @booking.save!
-      redirect_to products_path, alert: 'Congratulations! You booked a product'
+      redirect_to products_path, alert: 'Congratulations! You have rented gear!'
     else
       render :new
     end
