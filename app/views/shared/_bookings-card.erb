@@ -3,8 +3,8 @@
     <div class="bookings-card-products">
       <% @bookings.each do |b| %>
         <div class="booking-card-infos" id ="left">
-          <h2> <strong></strong> <%= b.product.name %></h2><br>
-          <h3><%= b.user.first_name%></h3><br>
+          <h2> <%= b.product.name %></h2><br>
+          <h3>User: <%= b.user.first_name%></h3><br>
           <h3>Date:<%= b.date%></h3><br>
             <%= simple_form_for [current_user, b] do |f| %>
               <%= f.input :status, label: 'Status:', collection:['pending','confirmed', 'cancelled'] %>
@@ -17,12 +17,11 @@
     </div>
 </div>
 
-
   <div class="bookings-customer-container">
     <h1> My bookings !! (customer) </h1>
         <% @customer_booking.each do |b| %>
             <li> <strong>Gear:</strong> <%= b.product.name %></li><br>
-            <li>Status:</strong> <%= b.status %></li><br>
+            <li>Status: <%= b.status %></li><br>
             <li>Date:<%= b.date%></li><br>
             <li>User ID:<%= b.user.first_name%></li><br>
             <li>Product owner:<%= b.product.user.first_name%></li><br>
