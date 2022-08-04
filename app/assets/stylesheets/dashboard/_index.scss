@@ -6,24 +6,28 @@
 }
 
 .personal-info-container {
-  width: 50%;
+  width: 100%;
   }
 
   .personal-info-top{
     display: flex;
     justify-content: space-between;
     padding-bottom: 4px;
-    background: white;
+    align-items: center;
   }
   .personal-info-bottom{
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     height: fit-content;
-    padding: 4px;
+    padding: 16px;
+    padding-top: 50px;
+    padding-bottom: 72px;
+    color: $teal;
+    border-radius: 8px;
   }
 
 .my-gear-container{
-  width: 50%;
+  width: 100%;
 }
 
 .gear-cards{
@@ -36,18 +40,25 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.gear-card-bottom h3 {
+  color: $teal;
+  padding-top: 10px;
 }
 
 .gear-card-top{
   display: flex;
   justify-content: space-between;
   padding-bottom: 4px;
-  background: white;
+  align-items: center;
 }
 
 .gear-card-bottom{
   background-color: white;
   margin-bottom: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  padding: 8px 4px;
+  padding: 10px;
+  border-radius: 8px;
 }

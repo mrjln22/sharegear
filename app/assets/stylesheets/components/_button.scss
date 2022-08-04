@@ -2,10 +2,9 @@
   border-radius: 1px;
   font-weight: bold;
   background: white;
-  color: $teal;
+  color: $secondary;
   transition: 0.3s ease;
   text-decoration: none;
-  border-bottom: 1.5px solid $teal;
   width: 120px;
   height: 30px;
   text-align: center;
@@ -19,9 +18,11 @@
   background: white;
   text-decoration: none;
   color: white;
-  border-bottom: 1.5px solid $secondary;
-  color:  $secondary;
-  height: 20px;
+  border-bottom: 1.5px solid $teal;
+  color:  $teal;
+  height: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
+  text-align: center;
+  font-size: 18px;
   }
