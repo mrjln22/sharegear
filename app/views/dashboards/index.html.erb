@@ -6,7 +6,7 @@
   <div class="personal-info-container">
     <div class= "personal-info-top">
       <h2> My personal information </h2>
-      <%= link_to "Edit", "", class: "btn-orange"  %>
+      <%= link_to "Edit", "", class: "btn-secondary"  %>
     </div>
     <div class= "personal-info-bottom">
       <h4> <strong>Name: </strong><%=@user.first_name%></h4>
@@ -21,13 +21,13 @@
   <div class="my-gear-container">
     <div class= "gear-card-top">
       <h2> My gear </h2>
-      <%= link_to "add new gear", new_product_path, class: "btn-orange"  %>
+      <%= link_to "Add Gear", new_product_path, class: "btn-secondary"  %>
     </div>
     <% @products.each do |product| %>
     <div class="gear-card-bottom">
       <img src="https://source.unsplash.com/random/?<%= product.name %>" />
         <h3><%= product.name %></h3>
-          <%= link_to "Edit Gear", edit_product_path(product.id),     class:"btn-orange" %>
+          <%= link_to "Edit", edit_product_path(product.id),     class:"btn-orange" %>
           <%= link_to "Delete", product_path(product.id), method: :delete,data:   {   confirm: "Are you sure" }, class: "btn-orange" %>
         </div>
     <% end %>
