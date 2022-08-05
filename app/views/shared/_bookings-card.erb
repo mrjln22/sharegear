@@ -1,31 +1,45 @@
-<div class="bookings-index-container">
+<div class ="page-container">
   <h1> My booked services/ owner</h1>
-    <div class="bookings-card-products">
-      <% @bookings.each do |b| %>
-        <div class="booking-card-infos" id ="left">
-          <h2> <%= b.product.name %></h2><br>
-          <h3>User: <%= b.user.first_name%></h3><br>
+  <div class="bookings-index-container">
+    <% @bookings.each do |b| %>
+      <div class="booking-index-card">
+      <div class="booking-flex">
+      <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
+        <div class="booking-index-card-top">
+          <h2><%= b.product.name %></h2><br>
           <h3>Date:<%= b.date%></h3><br>
-            <%= simple_form_for [current_user, b] do |f| %>
+          <%= simple_form_for [current_user, b] do |f| %>
+            <div class="status-flex">
               <%= f.input :status, label: 'Status:', collection:['pending','confirmed', 'cancelled'] %>
-                <%= f.button :submit, "Submit", class: 'btn-orange'%>
-                <% end %>
-
-                <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
+            </div>
+            <%= f.button :submit, "Submit", class: 'btn-orange'%>
+          <% end %>
         </div>
-      <% end %>
+      </div>
+      </div>
+    <% end %>
+  </div>
+
+
+  <h1> My bookings !! (customer) </h1>
+  <div class="bookings-index-container">
+    <% @customer_booking.each do |b| %>
+    <div class="booking-index-card">
+      <div class="booking-flex">
+        <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
+        <div>
+          <p>Booked for: <%= b.date%></p><br>
+          <p>Status: <%= b.status %></p>
+        </div>
+        <div class="booking-index-card-left">
+          <h1> <%= b.product.name %></h1>
+          <p><%= b.product.description%></p>
+          <div class="booking-index-card-bottom">
+            <p>Owner: <%= b.product.user.first_name%>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-  <div class="bookings-customer-container">
-    <h1> My bookings !! (customer) </h1>
-        <% @customer_booking.each do |b| %>
-            <li> <strong>Gear:</strong> <%= b.product.name %></li><br>
-            <li>Status: <%= b.status %></li><br>
-            <li>Date:<%= b.date%></li><br>
-            <li>User ID:<%= b.user.first_name%></li><br>
-            <li>Product owner:<%= b.product.user.first_name%></li><br>
-
-        <% end %>
+    <% end %>
   </div>
 </div>
