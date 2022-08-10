@@ -7,6 +7,12 @@ class ProductsController < ApplicationController
       @products = Product.search_by_name_and_category(params[:query])
     else
       @products = Product.all
+      @markers = @products.geocoded.map do |product|
+        {
+          lat: product.latitude,
+          lng: product.longitude
+        }
+      end
     end
   end
 
@@ -28,7 +34,6 @@ class ProductsController < ApplicationController
 
   def show
     @booking = Booking.new
-
   end
 
   def destroy
