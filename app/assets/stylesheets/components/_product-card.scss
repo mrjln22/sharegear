@@ -1,6 +1,6 @@
 .cards{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 }
 
@@ -52,4 +52,10 @@
 
   .cards a {
     text-decoration: none;
+  }
+
+  #map {
+    height: 100vh;
+    position: sticky;
+    top: 0;
   }
