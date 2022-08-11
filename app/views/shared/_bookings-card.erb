@@ -1,37 +1,46 @@
 
-<div class="bookings-index-container">
-  <div class="personal-info-container">
-    <div class="bookings-booked-top">
-      <h1> My booked services/ owner</h1>
-    </div>
-        <% @bookings.each do |b| %>
-         <div class="bookings-booked-bottom">
-         <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
-            <h2> <strong></strong> <%= b.product.name %></h2><br>
-            <h3><%= b.user.first_name%></h3><br>
-            <h3>Date:<%= b.date%></h3><br>
-              <%= simple_form_for [current_user, b] do |f| %>
-              <%= f.input :status, label: 'Status:', collection:['pending','confirmed', 'cancelled'] %>
-              <%= f.button :submit, "Submit", class: "btn btn-dark"%>
-              </div>
-              <% end %>
-
-            <% end %>
-      </div>
-    </div>
-  <div class="my-gear-container">
-    <div class= "bookings-customer-top">
-      <h1> My bookings !! (customer) </h1>
-    </div>
-      <div class="bookings-customer-container">
-        <% @customer_booking.each do |b| %>
-        <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
-          <h2> <strong>Gear:</strong> <%= b.product.name %></h2><br>
-          <h3>Status:</strong> <%= b.status %></h3><br>
+<div class ="page-container">
+  <h1> My booked services/ owner</h1>
+  <div class="bookings-index-container">
+    <% @bookings.each do |b| %>
+      <div class="booking-index-card">
+      <div class="booking-flex">
+      <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
+        <div class="booking-index-card-top">
+          <h2><%= b.product.name %></h2><br>
           <h3>Date:<%= b.date%></h3><br>
-          <h3>User ID:<%= b.user.first_name%></h3><br>
-          <h3>Product owner:<%= b.product.user.first_name%></h3><br>
+          <%= simple_form_for [current_user, b] do |f| %>
+            <div class="status-flex">
+              <%= f.input :status, label: 'Status:', collection:['pending','confirmed', 'cancelled'] %>
+            </div>
+            <%= f.button :submit, "Submit", class: 'btn-orange'%>
           <% end %>
+        </div>
       </div>
+      </div>
+    <% end %>
+  </div>
+
+
+  <h1> My bookings !! (customer) </h1>
+  <div class="bookings-index-container">
+    <% @customer_booking.each do |b| %>
+    <div class="booking-index-card">
+      <div class="booking-flex">
+        <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
+        <div>
+          <p>Booked for: <%= b.date%></p><br>
+          <p>Status: <%= b.status %></p>
+        </div>
+        <div class="booking-index-card-left">
+          <h1> <%= b.product.name %></h1>
+          <p><%= b.product.description%></p>
+          <div class="booking-index-card-bottom">
+            <p>Owner: <%= b.product.user.first_name%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>

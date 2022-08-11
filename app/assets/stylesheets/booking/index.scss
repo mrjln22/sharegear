@@ -1,0 +1,58 @@
+.page-container{
+  margin: 24px
+}
+
+.bookings-index-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 10%;
+}
+
+.booking-flex img{
+  width: 200px;
+  object-fit: cover;
+  height: 234px;
+}
+
+.booking-index-card{
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 4px;
+  height: 250px;
+}
+
+.booking-flex{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.status-flex{
+  display: flex;
+}
+
+.mb-3{
+  align-items: baseline;
+  display: flex;
+}
+
+.form-label{
+  width: 100px;
+}
+
+.customer-booking-index-card-top{
+  display: flex;
+  align-items: center;
+}
+
+.booking-index-card-bottom{
+  display: flex;
+  align-items: center;
+}
+
+p{
+margin-bottom: 7rem;
+margin-top: 10px
+}

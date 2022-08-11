@@ -1,9 +1,15 @@
 .btn-orange{
   text-decoration: none;
   border-radius: 20px;
-  background-color: #C86610;
+  background-color: white;
   border: 1px;
-  color: black;
+  color: #C86610;
   text-align: center;
-  line-height: 41px
+  height: 25px;
+  width:75px;
+  padding:2px;
+}
+.btn-orange:hover{
+  background-color: #C86610;
+  color: white;
 }
