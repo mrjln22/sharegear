@@ -1,13 +1,14 @@
 .cards{
-  display: flex;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-gap: 16px;
 }
 
 .card-product-container {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 35px;
+  display: flex;
 }
 
   .card-product-footer{
@@ -54,7 +55,7 @@
     text-decoration: none;
   }
 
-  #map {
+  .map-container {
     height: 100vh;
     position: sticky;
     top: 0;
