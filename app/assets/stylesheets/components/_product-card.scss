@@ -3,6 +3,7 @@
  grid-template-columns: 1fr 1fr;
  grid-gap: 16px;
  margin-right: 16px;
+ width: 65%;
 }
 
 .card-product-container {
@@ -12,7 +13,7 @@
   display: flex;
 }
 
-  .card-product-footer{
+.card-product-footer{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -22,7 +23,7 @@
     text-decoration: none;
     color: $secondary;
     background-color: white;
-  }
+}
 
   .card-product img {
     height: 200px;
@@ -54,10 +55,4 @@
 
   .cards a {
     text-decoration: none;
-  }
-
-  .map-container {
-    height: 100vh;
-    position: sticky;
-    top: 0;
   }
