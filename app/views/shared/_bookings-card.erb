@@ -8,7 +8,7 @@
     <h3><%= b.product.name  %></h3>
     <h3>Bookings date:<%= b.date%></h3><br>
     <%= simple_form_for [current_user, b] do |f| %>
-      <%= f.input :status, label: 'Status:', collection:['pending','confirmed', 'cancelled'] %>
+      <%= f.input :status, label: 'Status:', collection:['pending','confirm', 'cancel'] %>
       <%= f.button :submit, "Submit", class: 'btn-orange' %>
     <% end %>
   </div>
@@ -22,9 +22,9 @@
   <% @customer_booking.each do |b| %>
   <div class="booking-index-card-bottom">
     <img src="https://source.unsplash.com/random/?<%= b.product.name %>" />
+    <h3> <%= b.product.name %></h3>
     <p>Booked for: <%= b.date%></p><br>
     <p>Status: <%= b.status %></p>
-    <h1> <%= b.product.name %></h1>
     <p><%= b.product.description%></p>
     <p>Owner: <%= b.product.user.first_name%>
   </div>
