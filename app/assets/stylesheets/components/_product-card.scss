@@ -1,10 +1,28 @@
 .cards{
  display: grid;
- grid-template-columns: 1fr 1fr;
  grid-gap: 16px;
  margin-right: 16px;
  width: 65%;
 }
+
+@media(max-width: 100px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 500px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .card-product-container {
   margin-left: 10%;
