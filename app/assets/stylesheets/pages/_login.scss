@@ -1,7 +1,6 @@
 .log-in {
   margin: 30%;
   margin-top: 10%;
-  background-image: url("images/mountain.png");
   background-color: white;
   padding: 40px;
   border-radius: 8px;
@@ -15,8 +14,14 @@
 .login-image {
   padding: 0%;
   background-size: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height:100%;
+  width: 100%;
 }
 
 .body {
   height: auto;
+  background-image: url("mountain.png");
 }
